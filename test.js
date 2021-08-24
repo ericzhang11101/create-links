@@ -19,18 +19,16 @@ function convertText(){
 
         let start = line.indexOf('http')
         if (start > 0){
-            let eee = true
-
-
-            console.log(line)
+            let cont = true
+            // check if ignore 
             for (let j = 0; j < ignore.length; j++){
                 console.log(line + " " + line.indexOf(ignore[j]))
                 if (line.indexOf(ignore[j]) > 0){
-                    eee = false;
+                    cont = false;
                 }
             }
             
-            if (eee){
+            if (cont){
                 let tempStr = line.substring(start)
                 let end = tempStr.indexOf('<')
                 let url
@@ -40,17 +38,14 @@ function convertText(){
                 else {
                     url = tempStr
                 } 
-
+                
+                // checks location of spaces
                 if (url.indexOf("&nbsp;") != -1){
                     url = url.substring(0, url.indexOf("&nbsp;"))
                 }
-                console.log(url)
+
                 let aTag = `<a href="${url}">${url}</a>`
                 let newLine = line.substring(0, start) + aTag + tempStr.substring(end)
-                console.log('a: ' + aTag)
-                console.log('line: ' + newLine)
-                console.log(' ')
-                console.log(' ')
                 arr[i] = newLine
             }
         }
@@ -58,6 +53,8 @@ function convertText(){
 
     textInput.value = arr.join('\n')
     showCopied.style.display = 'block'
+
+    // copies text to clipboard
     textInput.focus()
     textInput.select()
     try {
