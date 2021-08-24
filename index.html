@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="test.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header">Anchor Maker</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <h2 class="header">Text Input</h2>
+            <textarea id="textInput" class="text-input"type="textarea" col="200" rows="35"></textarea>
+            <button class="btn" onclick="convertText()">Convert Now</button>
+            <h2 class="header" id="showCopied" style="display: none;">Copied!</h2>
+        </div>
+        <div class="flex-item" style="display: none">
+            <h2 class="header">Text Output</h2>
+            <textarea id="textOutput" class="text-input"type="textarea" col="100" rows="45"></textarea>
+        </div>
+        
+    </div>
+</body>
+</html>

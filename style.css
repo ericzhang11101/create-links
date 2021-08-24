@@ -1,0 +1,45 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    margin: -8px;
+    align-items: center;
+
+}
+.flex-item{
+    width: 90%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin: 2rem;
+    border: 2px solid black;
+
+}
+
+.header{
+    text-align: center;
+}
+
+.text-input{
+    width: 100%;
+}
+
+.btn{
+    font-size: 1.5rem;
+    text-decoration: none;
+    background: lime;
+    border: none;
+    padding: 0.25rem 1rem;
+    width: 14rem;
+    margin-left: calc(50% - 7rem);
+    border-radius: 0.25rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:active{
+    background: limegreen;
+}
